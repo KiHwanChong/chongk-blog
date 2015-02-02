@@ -1,2 +1,8 @@
 <?php
-    $path = "/chongk-blog/";
+   $path = "/chongk-blog/";
+    
+   $host = "localhost";
+   $username = "root";
+   $password = "root";
+   $database = "blog_db";
+   
