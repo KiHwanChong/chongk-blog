@@ -1,0 +1,79 @@
+/*This fixes padding of the title of each page.*/
+div{
+    border-width: 5px;
+    padding: 30px;
+    margin: 0px;
+}
+
+.clean {
+    width: 1348px;
+}
+
+/*This class that adjusts the margin of the items to look nice*/ 
+.list-group-item {
+    border: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*I used background image. In order to fill the entire page I used no repeat and 100% width and height.
+Also, I sized up the font throught out the whole pages.*/
+body {
+    font-size: 23px;
+    background-image: url(https://enricator.files.wordpress.com/2012/02/gimp-background-002.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/*A class to increase the size of the font of the title on each page*/
+.title {
+    font-size: 38px;
+}
+
+/*custom cursor*/
+body {
+    cursor: url('../cursor-3-32.png'), default;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 640px;
+    height: 960px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
