@@ -1,17 +1,23 @@
 <?php
  require_once(__DIR__ . "/../model/config.php");
- 
-    $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
+    $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);       
     $npassword = filter_input(INPUT_POST, "npassword", FILTER_SANITIZE_STRING);
+       
+    $salt = "$5$" . "rounds=5000$" . uniqid(mt_rand(), true) . "$";
     
-    $query = $_SESSION["connection"]->query("SELECT salt, password FROM users WHERE BINARY username = '$username'");
+    $hashedPassword = crypt($npassword, $salt);
+    
+    $query = $_SESSION["connection"]->query("SELECT salt, password, id FROM users WHERE BINARY username = '$username'");
      
      if($query->num_rows == 1) {
          $row = $query->fetch_array();
          
         if($row["password"] === crypt($password, $row["salt"])) {
-            $_SESSION["authenticated"] = true;
-             echo "<p>Login Successful</p>";
+            $query = $_SESSION["connection"]->query("UPDATE users SET "
+            . "password = '$hashedPassword',"
+            . "salt = '$salt' WHERE username='$username'");
+             echo "<p>Change Successful</p>";
              
          }
          else {

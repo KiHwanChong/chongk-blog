@@ -31,13 +31,11 @@
           
          echo "<p>successfully created</p>";
      }
-    
-//    
-//     if($query) {
-//        echo "successfully created user: $username";
-//    }
-//    else {
-//        echo "<p>" . $_SESSION["connection"]->error . "</p>";
-//    }
-//
-//    
+     ?>
+     
+    <nav>
+    <ul>
+        <li><a href="<?php echo $path . "index.php" ?>">Go back to home</a></li>
+        <li><a href="<?php echo $path . "register.php" ?>">Try again</a></li>
+    </ul>
+    </nav>

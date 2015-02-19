@@ -10,6 +10,7 @@
     $password = "root";
     $database = "blog_db";
     
+    //if there is no connection of database, it sets new database and connects it
     if(!isset($_SESSION["connection"])) {        
         $connection = new Database($host, $username, $password, $database);
         $_SESSION["connection"] = $connection;
