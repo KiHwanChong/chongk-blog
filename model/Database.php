@@ -1,5 +1,6 @@
 <?php
 
+//set up database... private means it only works in this page, whereas public can work in other pages
 class Database {
 
     private $connection;

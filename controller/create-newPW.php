@@ -1,4 +1,5 @@
 <?php
+//same contents as creat-user... but i add npassword (new password) for input.
  require_once(__DIR__ . "/../model/config.php");
     $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);       
@@ -13,6 +14,7 @@
      if($query->num_rows == 1) {
          $row = $query->fetch_array();
          
+         //if the old password matches to the password in the table, it chooses it and update it into new password
         if($row["password"] === crypt($password, $row["salt"])) {
             $query = $_SESSION["connection"]->query("UPDATE users SET "
             . "password = '$hashedPassword',"

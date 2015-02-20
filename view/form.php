@@ -1,4 +1,6 @@
 <?php
+//if the user is not authenticated, the user cannot access this page, directly typing the address of this page. 
+//And it redirects the user to index page
     require_once(__DIR__ . "/../model/config.php");
     require_once(__DIR__ . "/../controller/login-verify.php");
     
