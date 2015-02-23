@@ -1,4 +1,5 @@
 <?php
+//this navigation is for the authenticated user
     require_once(__DIR__ . "/../model/config.php");
 ?>
 <nav>

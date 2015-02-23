@@ -13,7 +13,8 @@
              echo "<h2>" . $row['title'] . "</h2>";
              echo "<br/ >";
              echo "<p>" . $row['post'] . "</h1>";
-             echo "<br/>";
+             echo "<br/>";          
+             echo date('Y-m-d H:i:s');
              echo "</div>";
              
                      

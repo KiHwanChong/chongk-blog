@@ -14,3 +14,10 @@
         echo "<p>" . $_SESSION["connection"]->error . "</p>";
     }
     
+    ?>
+
+<nav>
+    <ul>
+        <li><a href="<?php echo $path . "index.php" ?>">Go back to home</a></li>
+    </ul>
+</nav>
