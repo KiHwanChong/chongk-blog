@@ -14,7 +14,7 @@
              echo "<br/ >";
              echo "<p>" . $row['post'] . "</h1>";
              echo "<br/>";          
-             echo date('Y-m-d H:i:s');
+             echo "<h3>" . $row['date'] . "</h3>";
              echo "</div>";
              
                      

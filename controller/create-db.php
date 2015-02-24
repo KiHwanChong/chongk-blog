@@ -2,10 +2,12 @@
    require_once(__DIR__ . "/../model/config.php");
   
    //creating posts. NOT NULL prevents an empty box. title's characters are less than 255. 
+   //inserting date in the posts
    $query = $_SESSION["connection"]->query("CREATE TABLE posts ("
            . "id int(11) NOT NULL AUTO_INCREMENT,"
            . "title varchar(255) NOT NULL,"
            . "post text NOT NULL,"
+           . "date varchar(255) NOT NULL,"
            . "PRIMARY KEY (id))");
    
    //if it creates posts successfully, echo out it is successful. if not, echo out error occurs 
