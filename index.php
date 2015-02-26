@@ -13,3 +13,4 @@
     require_once(__DIR__ . "/controller/read-posts.php");
     require_once(__DIR__ . "/view/footer.php");
 ?>
+

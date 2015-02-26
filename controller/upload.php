@@ -1,4 +1,5 @@
 <?php
+//this page helps upload images...
 $target_dir = __DIR__ . "/../uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;

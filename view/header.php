@@ -13,4 +13,4 @@ and open the template in the editor.
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
         <link type="text/css" rel="stylesheet" href="css/custom-style.css"> 
     </head>
-    <body>
+    <body class="bg2">

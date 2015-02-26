@@ -20,11 +20,26 @@ div{
 Also, I sized up the font throught out the whole pages.*/
 body {
     font-size: 23px;
-    background-image: url(https://enricator.files.wordpress.com/2012/02/gimp-background-002.jpg);
+}
+
+.bg1 {
+    background-image: url(http://www.pptback.com/uploads/abstract-white-cool-backgrounds-powerpoint.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/*Each class for different background image on each page.*/
+.bg2 {
+    background-image: url(http://www.funchap.com/wp-content/uploads/2014/01/Abstract-Color-Background.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
+
+.bg3{
+    background-image: url(http://www.funchap.com/wp-content/uploads/2014/01/abstract-white-wallpapers.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 /*A class to increase the size of the font of the title on each page*/
 .title {
     font-size: 38px;
